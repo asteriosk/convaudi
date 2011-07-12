@@ -32,7 +32,7 @@ class Converter
       opts.separator ""
       opts.separator "Available options:"
 
-      opts.on("-c", "--concurrency [NUM_OF_CPUS]", "The number of threads executing conversion at any given point. Default: number of processors") do |arg|
+      opts.on("-c", "--concurrency [NUM_OF_CPUS]", "The number of threads executing conversion at any given point. Default: 2") do |arg|
         @concurrency = Integer(arg)
       end
       

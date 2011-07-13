@@ -1,14 +1,16 @@
 ConvAudi
 ========
+convaudi is a handy tool to massively convert audio files of various formats into other formats. It is built on (and supports all formats supported by) [FFmpeg](http://ffmpeg.org/ "FFmpeg"). 
+
+
+
 
 Requirements
 -----
-The following gems are required for it to run:
-popen4, thread_storm, progressbar
+FFmpeg has to exist in your PATH. Also, the following gems have to be installed: popen4, thread_storm, progressbar.
 
 Usage
 -----
-
     $ ruby convaudi.rb [options]
 
     Available options:

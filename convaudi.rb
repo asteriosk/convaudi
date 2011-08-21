@@ -89,7 +89,7 @@ class Converter
             exit_code,error_output = execute(command)
           if exit_code==0
             if @remove
-              FileUtils.delete(original);
+              File.delete(original);
             else
               FileUtils.mv(original, original+'.converted');
             end

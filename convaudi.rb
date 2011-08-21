@@ -88,7 +88,11 @@ class Converter
         if !@pretend
             exit_code,error_output = execute(command)
           if exit_code==0
-            FileUtils.mv(original, original+'.converted');
+            if @remove
+              FileUtils.delete(original);
+            else
+              FileUtils.mv(original, original+'.converted');
+            end
           else
             mutex.synchronize { @failed << command + "\n" + error_output + " Exit code: " + exit_code.to_s }
           end
